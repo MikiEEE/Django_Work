@@ -1,52 +1,41 @@
-/// PART 8 - LOOP EXERCISES
-// Before we continue on with your project, let's practice some loops!
-// You'll have just two problems, but you'll need to use each loop type we
-// learned about to solve them!
 
 
-///////////////////
-//// PROBLEM 1 ///
-/////////////////
+var name = false;
+var age = false;
+var height = false;
+var pet = false;
+var userInput
 
-// Use a For Loop to print (console.log()) out the word "hello" 5 times.
-//
-// Do this with a While Loop and a For Loop
+userInput =  prompt("Enter your first and last Name.");
 
-// While Loop
-for(var i = 0; i <5; i++) {
-  console.log("Hello");
-}
-console.log("endfor")
-
-// For Loop
-var i = 5;
-while(i > 0) {
-console.log("Hello");
-i--
+if((userInput.split(" "))[0].charAt(0) == (userInput.split(" "))[1].charAt(0)) {
+   name = true;
 }
 
+userInput = prompt("Enter your age.")
 
-/////////////////
-// PROBLEM 2 ///
-///////////////
-
-// Use Loops to console.log() (print out) all the odd numbers from 1 to 25
-// Do this using two methods, a while loop and a for loop
-
-// METHOD ONE
-// While Loop
-while(i <= 25) {
-  if(25%i !== 1) {
-    console.log(i + "\n");
-  }
-  i++
+if((userInput < 31) || (userInput > 19)) {
+  age = true;
 }
 
+userInput = prompt("Enter your height in centimeters.")
 
-// METHOD TWO
-// For Loop
-for(var i = 1; i < 26; i++) {
-  if(25%i !== 1) {
-    console.log(i +"\n");
-  }
+if(userInput > 169) {
+  userInput = true;
 }
+
+userInput = prompt("Enter your pets Name.")
+if(userInput.charAt(userInput.length - 1) === 'y') {
+  pet = true
+}
+
+if(name && age && userInput && pet) {
+  console.log("Welcome to the spy lair...");
+}
+
+/*
+  Initially wanted to use a a nested if else but decided
+  against it because I wanted all four statements to be asked
+  regardless of the answer. After questioning I wanted it
+   to be evaluated at the end.
+*/
