@@ -1,0 +1,32 @@
+body{
+  text-align: center;
+  color: rgb(177, 186, 188);
+  background-color: rgb(91, 117, 124);
+  font-family: 'Roboto Slab', serif;
+  margin: 0px;
+}
+div{
+  border-bottom: #0d272d solid 3em;
+  border-left: #0d272d solid 3em;
+  border-right: #0d272d solid 3em;
+}
+
+.text {
+  margin-left: 17%;
+  margin-right: 17%;
+}
+
+#Button {
+  padding: .5em;
+  font-family: 'Roboto Slab', serif;
+  background-color: orange;
+  padding: 1em;
+  border-radius: 10%;
+  font-size: 1em;
+}
+
+input{
+  font-size: 1.5em;
+  border: solid black .1em;
+  border-radius: 5%
+}
