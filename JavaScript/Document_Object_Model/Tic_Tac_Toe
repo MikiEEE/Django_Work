@@ -11,26 +11,28 @@
   </head>
   <body>
     <div class="container jumbotron col-lg-6 col-sm-6 col-md-6 col-6">
-            <h1>Welcome to Tic Tac Toe!</h1>
-            <p><button type="button" class="btn btn-primary" name="button">Restart!</button></p>
+            <h4>Welcome to:</h4>
+            <h1>Tic Tac Toe!</h1>
+            <p></p>
+              <button type="button" id="form"class="btn btn-primary" value="Submit" name="button">Restart!</button>
     </div>
 
     <div class="container col-lg-6 col-sm-6 col-md-6 col-6">
       <table class="" align="center">
         <tr>
           <td id="zero0"></td>
-          <td id="0_1"></td>
-          <td id="0_2"></td>
+          <td id="zero1"></td>
+          <td id="zero2"></td>
         </tr>
         <tr>
-          <td id="10"></td>
-          <td id="11"></td>
-          <td id="12"></td>
+          <td id="one0"></td>
+          <td id="one1"></td>
+          <td id="one2"></td>
         </tr>
         <tr>
-          <td id="20"></td>
-          <td id="21"></td>
-          <td id="22"></td>
+          <td id="two0"></td>
+          <td id="two1"></td>
+          <td id="two2"></td>
         </tr>
       </table>
     </div>
