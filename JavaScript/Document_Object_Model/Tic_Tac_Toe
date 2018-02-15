@@ -10,32 +10,32 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="container jumbotron col-lg-6 col-sm-6 col-md-6 col-6">
-            <h4>Welcome to:</h4>
-            <h1>Tic Tac Toe!</h1>
-            <p></p>
-              <button type="button" id="form"class="btn btn-primary" value="Submit" name="button">Restart!</button>
+    <div class="container">
+      <div class="jumbotron ">
+              <h4>Welcome to:</h4>
+              <h1>Tic Tac Toe!</h1>
+              <p></p>
+                <button type="button" id="form"class="btn btn-primary" value="Submit" name="button">Restart!</button>
+      </div>
+        <table align="center">
+          <tr>
+            <td id="zero0"></td>
+            <td id="zero1"></td>
+            <td id="zero2"></td>
+          </tr>
+          <tr>
+            <td id="one0"></td>
+            <td id="one1"></td>
+            <td id="one2"></td>
+          </tr>
+          <tr>
+            <td id="two0"></td>
+            <td id="two1"></td>
+            <td id="two2"></td>
+          </tr>
+        </table>
     </div>
 
-    <div class="container col-lg-6 col-sm-6 col-md-6 col-6">
-      <table class="" align="center">
-        <tr>
-          <td id="zero0"></td>
-          <td id="zero1"></td>
-          <td id="zero2"></td>
-        </tr>
-        <tr>
-          <td id="one0"></td>
-          <td id="one1"></td>
-          <td id="one2"></td>
-        </tr>
-        <tr>
-          <td id="two0"></td>
-          <td id="two1"></td>
-          <td id="two2"></td>
-        </tr>
-      </table>
-    </div>
     <script type="text/javascript" src="Tic_Tac_Toe.js">
 
     </script>
