@@ -27,10 +27,10 @@ function findGray() {
 }
 
 function testForWin() {
-  // if(horizontalVictory()) {
-  //
-  // }
-  if(verticalVictory()) {
+  if(horizontalVictory()) {
+    console.log("Horizont");
+  }
+  else if(verticalVictory()) {
 
     }
   // else if (diagonalLeftVictory()) {
@@ -42,11 +42,11 @@ function testForWin() {
 function diagonalLeftVictory() {
   for(var rows = 0; rows < 3; rows++) {
     for(var column = 0; column < 8; column++) {
-      console.log($('button').eq((rows * 6) + column).css('background-color'));
-      if($('button').eq((rows * 6) + column).css('background-color') != 'rgb(128, 128, 128)') {
-        if($('button').eq(((rows + 3) * 6) + column).css('background-color') == $('button').eq((rows * 6) + column + 1).css('background-color')) {
-          if($('button').eq(((rows + 2) * 6) + column + 1).css('background-color') == $('button').eq((rows * 6) + column + 2).css('background-color')) {
-            if($('button').eq(((rows + 1) * 6) + column + 2).css('background-color') == $('button').eq((rows * 6) + column + 3).css('background-color')) {
+      console.log($('button').eq((rows * 7) + column).css('background-color'));
+      if($('button').eq((rows * 7) + column).css('background-color') != 'rgb(128, 128, 128)') {
+        if($('button').eq(((rows + 3) * 7) + column).css('background-color') == $('button').eq((rows * 7) + column + 1).css('background-color')) {
+          if($('button').eq(((rows + 2) * 7) + column + 1).css('background-color') == $('button').eq((rows * 7) + column + 2).css('background-color')) {
+            if($('button').eq(((rows + 1) * 7) + column + 2).css('background-color') == $('button').eq((rows * 7) + column + 3).css('background-color')) {
               console.log("Winner is green");
               return true;
             }
@@ -60,11 +60,11 @@ function diagonalLeftVictory() {
 function verticalVictory() {
   for(var rows = 0; rows < 3; rows++) {
     for(var column = 0; column < 8; column++) {
-      console.log($('button').eq(((rows) * 6) + column).css('background-color'));
-      if($('button').eq(((rows + 3) * 6) + column).css('background-color') != 'rgb(128, 128, 128)') {
-        if($('button').eq(((rows + 3) * 6) + column).css('background-color') == $('button').eq((rows * 6) + column).css('background-color')) {
-          if($('button').eq(((rows + 2) * 6) + column).css('background-color') == $('button').eq((rows * 6) + column).css('background-color')) {
-            if($('button').eq(((rows + 1) * 6) + column).css('background-color') == $('button').eq((rows * 6) + column).css('background-color')) {
+      console.log($('button').eq(((rows) * 7) + column).css('background-color'));
+      if($('button').eq(((rows + 3) * 7) + column).css('background-color') != 'rgb(128, 128, 128)') {
+        if($('button').eq(((rows + 3) * 7) + column).css('background-color') == $('button').eq((rows * 7) + column).css('background-color')) {
+          if($('button').eq(((rows + 2) * 7) + column).css('background-color') == $('button').eq((rows * 7) + column).css('background-color')) {
+            if($('button').eq(((rows + 1) * 7) + column).css('background-color') == $('button').eq((rows * 7) + column).css('background-color')) {
               console.log("Winner is red");
               return true;
             }
@@ -77,12 +77,12 @@ function verticalVictory() {
 
 function horizontalVictory() {
   for(var rows = 0; rows < 6; rows++) {
-    for(var column = 0; column < 8; column++) {
-      console.log($('button').eq((rows * 6) + column).css('background-color'));
-      if($('button').eq((rows * 6) + column).css('background-color') != 'rgb(128, 128, 128)') {
-        if($('button').eq((rows * 6) + column).css('background-color') == $('button').eq((rows * 6) + column + 1).css('background-color')) {
-          if($('button').eq((rows * 6) + column).css('background-color') == $('button').eq((rows * 6) + column + 2).css('background-color')) {
-            if($('button').eq((rows * 6) + column).css('background-color') == $('button').eq((rows * 6) + column + 3).css('background-color')) {
+    for(var column = 0; column < 5; column++) {
+      console.log($('button').eq((rows * 7) + column).css('background-color'));
+      if($('button').eq((rows * 7) + column).css('background-color') != 'rgb(128, 128, 128)') {
+        if($('button').eq((rows * 7) + column).css('background-color') == $('button').eq((rows * 7) + column + 1).css('background-color')) {
+          if($('button').eq((rows * 7) + column).css('background-color') == $('button').eq((rows * 7) + column + 2).css('background-color')) {
+            if($('button').eq((rows * 7) + column).css('background-color') == $('button').eq((rows * 7) + column + 3).css('background-color')) {
               console.log("Winner is blue");
               return true;
             }
