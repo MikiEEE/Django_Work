@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="Tic_Tac_Toe.CSS">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron ">
+              <h4>Welcome to:</h4>
+              <h1>Tic Tac Toe!</h1>
+              <p></p>
+                <button type="button" id="form"class="btn btn-primary" value="Submit" name="button">Restart!</button>
+      </div>
+        <table align="center">
+          <tr>
+            <td id="zero0"></td>
+            <td id="zero1"></td>
+            <td id="zero2"></td>
+          </tr>
+          <tr>
+            <td id="one0"></td>
+            <td id="one1"></td>
+            <td id="one2"></td>
+          </tr>
+          <tr>
+            <td id="two0"></td>
+            <td id="two1"></td>
+            <td id="two2"></td>
+          </tr>
+        </table>
+        <script type="text/javascript" src="Tic_Tac_Toe.js"></script>
+    </div>
+
+
+  </body>
+</html>
