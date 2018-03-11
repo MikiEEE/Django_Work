@@ -72,4 +72,5 @@ age = 4
 name = "Sammy"
 
 # Use print formatting to print the following string:
-"Hello my dog's name is Sammy and he is 4 years old"
+string = "Hello my dog's name is {x} and he is {y} years old"
+print(string.format(x = name, y = age))
