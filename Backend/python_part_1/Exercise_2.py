@@ -3,9 +3,6 @@
 #####################################
 
 
-# Complete the tasks below by writing functions! Keep in mind, these can be
-# really tough, its all about breaking the problem down into smaller, logical
-# steps. If you get stuck, don't feel bad about having to peek to the solutions!
 
 #####################
 ## -- PROBLEM 1 -- ##
