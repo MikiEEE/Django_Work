@@ -7,13 +7,14 @@ def getSecondNumber(firstNumber):
     return int(random/10) - firstNumber * 10
 
 def getThirdNumber(firstNumber, secondNumber):
-    return random % ((firstNumber * 100 )+  (secondNumber * 10))
+    return random % ((firstNumber * 100 ) + (secondNumber * 10))
 
 def checkForMatch(userInput):
     match = False
-    for y in range(0,len(userInput)):
-        if(int(userInput[y]) == Numbers[y]):
-            match = True
+    if(len(userInput) <= 3):
+        for y in range(0,len(userInput)):
+            if(int(userInput[y]) == Numbers[y]):
+                match = True
     return match
 
 def checkForClose(userInput):
@@ -48,6 +49,9 @@ Numbers = [firstNumber,secondNumber,thirdNumber]
 
 print("CODE BREAKER GAME")
 print("TRY TO GUESS 3 DIGIT NUMBER")
+print("CLOSE: YOU'VE GUESSED A CORRECT NUMBER BUT IN THE WRONG POSITION.")
+print("MATCH: YOU'VE GUESSED A CORRECT NUMBER IN THE CORRECT POSITION")
+print("NOPE: YOU HAVEN'T GUESSED ANNY OF THE NUMBERS CORRECTLY")
 while not totalMatch:
     userInput = input('What is your Guess? ')
     Hint(userInput)
