@@ -5,7 +5,7 @@ def getSecondNumber(firstNumber, random):
     return int(random/10) - firstNumber * 10
 
 def getThirdNumber(firstNumber, secondNumber, random):
-    return random % ((firstNumber * 100 ) + (secondNumber * 10))
+    return random % ((firstNumber * 100) + (secondNumber * 10))
 
 def checkForMatch(userInput, Numbers):
     match = False
