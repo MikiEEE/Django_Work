@@ -37,7 +37,7 @@ function testForWin() {
     console.log("DL");
   }
   else if (diagonalRightVictory()) {
-    console.log("DR");
+    console.log("DR"); 
   }
 
 }
