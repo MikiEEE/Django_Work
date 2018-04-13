@@ -36,6 +36,9 @@ function testForWin() {
   else if (diagonalLeftVictory()) {
     console.log("DL");
   }
+  else if (diagonalRightVictory()) {
+    console.log("DR");
+  }
 
 }
 
@@ -46,10 +49,28 @@ function diagonalLeftVictory() {
       counter = 0;
       if($('button').eq((rows * 7) + column).css('background-color') != 'rgb(128, 128, 128)') {
       for(var i = 1; i < 4; i++) {
-        console.log(((rows + i) * 7) + column - 1);
           if($('button').eq((rows * 7) + column).css('background-color') == $('button').eq(((rows + i) * 7) + column - i).css('background-color')) {
                 counter++;
-                console.log(counter);
+              if(counter === 3) {
+                return true;
+              }
+          }
+        }
+      }
+    }
+  }
+    return false;
+}
+
+function diagonalRightVictory() {
+  var counter;
+  for(var rows = 0; rows < 3; rows++) {
+    for(var column = 0; column < 4; column++) {
+      counter = 0;
+      if($('button').eq((rows * 7) + column).css('background-color') != 'rgb(128, 128, 128)') {
+      for(var i = 1; i < 4; i++) {
+          if($('button').eq((rows * 7) + column).css('background-color') == $('button').eq(((rows + i) * 7) + column + i).css('background-color')) {
+                counter++;
               if(counter === 3) {
                 return true;
               }
