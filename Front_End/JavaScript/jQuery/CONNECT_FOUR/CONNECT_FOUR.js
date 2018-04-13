@@ -31,41 +31,46 @@ function testForWin() {
     console.log("Horizont");
   }
   else if(verticalVictory()) {
-
+    console.log("verticalVictory");
     }
-  // else if (diagonalLeftVictory()) {
-  //
-  // }
+  else if (diagonalLeftVictory()) {
+    console.log("DL");
+  }
 
 }
 
 function diagonalLeftVictory() {
+  var counter;
   for(var rows = 0; rows < 3; rows++) {
-    for(var column = 0; column < 8; column++) {
-      console.log($('button').eq((rows * 7) + column).css('background-color'));
+    for(var column = 3; column < 8; column++) {
+      counter = 0;
       if($('button').eq((rows * 7) + column).css('background-color') != 'rgb(128, 128, 128)') {
-        if($('button').eq(((rows + 3) * 7) + column).css('background-color') == $('button').eq((rows * 7) + column + 1).css('background-color')) {
-          if($('button').eq(((rows + 2) * 7) + column + 1).css('background-color') == $('button').eq((rows * 7) + column + 2).css('background-color')) {
-            if($('button').eq(((rows + 1) * 7) + column + 2).css('background-color') == $('button').eq((rows * 7) + column + 3).css('background-color')) {
-              console.log("Winner is green");
-              return true;
-            }
+      for(var i = 1; i < 4; i++) {
+        console.log(((rows + i) * 7) + column - 1);
+          if($('button').eq((rows * 7) + column).css('background-color') == $('button').eq(((rows + i) * 7) + column - i).css('background-color')) {
+                counter++;
+                console.log(counter);
+              if(counter === 3) {
+                return true;
+              }
           }
         }
       }
     }
   }
+    return false;
 }
 
 function verticalVictory() {
-  for(var rows = 0; rows < 3; rows++) {
-    for(var column = 0; column < 8; column++) {
-      console.log($('button').eq(((rows) * 7) + column).css('background-color'));
-      if($('button').eq(((rows + 3) * 7) + column).css('background-color') != 'rgb(128, 128, 128)') {
-        if($('button').eq(((rows + 3) * 7) + column).css('background-color') == $('button').eq((rows * 7) + column).css('background-color')) {
-          if($('button').eq(((rows + 2) * 7) + column).css('background-color') == $('button').eq((rows * 7) + column).css('background-color')) {
-            if($('button').eq(((rows + 1) * 7) + column).css('background-color') == $('button').eq((rows * 7) + column).css('background-color')) {
-              console.log("Winner is red");
+  var counter;
+  for(var rows = 3; rows > 0; rows--) {
+    for(var column = 8; column > 0; column--) {
+      counter = 0;
+      if($('button').eq(((rows - 2) * 7) + column).css('background-color') != 'rgb(128, 128, 128)') {
+        for(var i = 1; i < 4; i++ ) {
+          if($('button').eq(((rows - 2) * 7) + column).css('background-color') == $('button').eq(((rows - i - 2) * 7) + column).css('background-color')) {
+            counter++;
+            if(counter === 3){
               return true;
             }
           }
@@ -73,17 +78,18 @@ function verticalVictory() {
       }
     }
   }
+  return false;
 }
-
 function horizontalVictory() {
+  var counter;
   for(var rows = 0; rows < 6; rows++) {
     for(var column = 0; column < 5; column++) {
-      console.log($('button').eq((rows * 7) + column).css('background-color'));
+      counter = 0;
       if($('button').eq((rows * 7) + column).css('background-color') != 'rgb(128, 128, 128)') {
-        if($('button').eq((rows * 7) + column).css('background-color') == $('button').eq((rows * 7) + column + 1).css('background-color')) {
-          if($('button').eq((rows * 7) + column).css('background-color') == $('button').eq((rows * 7) + column + 2).css('background-color')) {
-            if($('button').eq((rows * 7) + column).css('background-color') == $('button').eq((rows * 7) + column + 3).css('background-color')) {
-              console.log("Winner is blue");
+        for(var i = 1; i < 4; i++ ) {
+          if($('button').eq((rows * 7) + column).css('background-color') == $('button').eq((rows * 7) + column + i).css('background-color')) {
+            counter++;
+            if(counter === 3){
               return true;
             }
           }
@@ -91,6 +97,7 @@ function horizontalVictory() {
       }
     }
   }
+  return false;
 }
 
 function toggle() {
