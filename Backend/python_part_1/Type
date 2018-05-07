@@ -1,0 +1,5 @@
+thing = '1+1'
+
+for x in range(0,len(thing)):
+    if(thing[x] == '+'):
+        print(int(thing[x - 1]) + int(thing[x +1]))

@@ -16,7 +16,13 @@ def main():
     print("MATCH: YOU'VE GUESSED A CORRECT NUMBER IN THE CORRECT POSITION")
     print("NOPE : YOU HAVEN'T GUESSED ANNY OF THE NUMBERS CORRECTLY")
     while not totalMatch:
-        userInput = input('What is your Guess? ')
-        lib.Hint(userInput, Numbers)
-        totalMatch = lib.totalMatchCheck(random, userInput)
+        userInput = input("What is your Guess? ")
+        print(userInput)
+        if(userInput == "q"):
+            break
+        try:
+            lib.Hint(userInput, Numbers)
+            totalMatch = lib.totalMatchCheck(random, userInput)
+        except ValueError:
+            print("Please input Integer")
 main()
